@@ -6,18 +6,24 @@ import (
 
 func main() {
 	// TODO parse it from argument
-	Solve(5)
+	Solve(10)
 }
 
 func Solve(i int) {
 	// TODO find a way to make it meta
 	fnMap := map[int]func(){
-		1: problem.Problem1,
-		2: problem.Problem2,
-		3: problem.Problem3,
-		4: problem.Problem4,
-		5: problem.Problem5,
+		1:  problem.Problem1,
+		2:  problem.Problem2,
+		3:  problem.Problem3,
+		4:  problem.Problem4,
+		5:  problem.Problem5,
+		6:  problem.Problem6,
+		7:  problem.Problem7,
+		8:  problem.Problem8,
+		9:  problem.Problem9,
+		10: problem.Problem10,
 	}
+
 	fnMap[i]()
 }
 

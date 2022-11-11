@@ -29,8 +29,20 @@ func GreatestCommonDivisor(a, b int) int {
 	return bgcd(a, b, 1)
 }
 
-func PrimeSieve(max int) []int {
+func PrimeSieve(max int) []bool {
 	return nil
+}
+
+func IsPrimeDumb(x int) bool {
+	if x == 1 {
+		return false
+	}
+	for i := 2; i <= ((x / 2) + 1); i++ {
+		if x%i == 0 {
+			return false
+		}
+	}
+	return true
 }
 
 func IntToArray(i int) []int {
@@ -49,7 +61,7 @@ func IntToArray(i int) []int {
 }
 
 func Max(xs []int) int {
-	res := 0 
+	res := 0
 	for i := range xs {
 		if res < i {
 			res = i
@@ -68,4 +80,3 @@ func IsPalin(x int) bool {
 	}
 	return true
 }
-
