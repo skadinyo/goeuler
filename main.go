@@ -6,7 +6,7 @@ import (
 
 func main() {
 	// TODO parse it from argument
-	Solve(3)
+	Solve(5)
 }
 
 func Solve(i int) {
@@ -15,6 +15,13 @@ func Solve(i int) {
 		1: problem.Problem1,
 		2: problem.Problem2,
 		3: problem.Problem3,
+		4: problem.Problem4,
+		5: problem.Problem5,
 	}
 	fnMap[i]()
+}
+
+func GenTemplate() {
+	// TODO
+	// create files for problem x
 }

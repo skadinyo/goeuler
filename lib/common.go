@@ -1,4 +1,4 @@
-package main
+package lib
 
 func LeastCommonMultiple(a, b int) int {
 	return a * b / GreatestCommonDivisor(a, b)
@@ -35,14 +35,37 @@ func PrimeSieve(max int) []int {
 
 func IntToArray(i int) []int {
 	res := []int{}
-	x := 1
+	x := i
 	if x == 0 {
 		return []int{0}
 	}
-	for x != 0 {
+	for x >= 10 {
 		rem := x % 10
-		res = append(res, rem)
+		res = append([]int{rem}, res...)
 		x /= 10
+	}
+	res = append([]int{x}, res...)
+	return res
+}
+
+func Max(xs []int) int {
+	res := 0 
+	for i := range xs {
+		if res < i {
+			res = i
+		}
 	}
 	return res
 }
+
+func IsPalin(x int) bool {
+	digit := IntToArray(x)
+	l := len(digit)
+	for i := 0; i <= l/2; i++ {
+		if digit[i] != digit[l-i-1] {
+			return false
+		}
+	}
+	return true
+}
+
