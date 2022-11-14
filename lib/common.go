@@ -60,6 +60,19 @@ func IntToArray(i int) []int {
 	return res
 }
 
+func ArrayToInt(arr []int) int {
+	res := 0
+	max := len(arr) - 1
+	i := 0
+	m := 1
+	for i <= max {
+		res += arr[max-i] * m
+		m *= 10
+		i++
+	}
+	return res
+}
+
 func Max(xs []int) int {
 	res := 0
 	for i := range xs {
