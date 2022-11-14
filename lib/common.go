@@ -73,6 +73,14 @@ func ArrayToInt(arr []int) int {
 	return res
 }
 
+func Sum(arr []int) int {
+	r := 0
+	for _, x := range arr {
+		r += x
+	}
+	return r
+}
+
 func Max(xs []int) int {
 	res := 0
 	for i := range xs {
@@ -92,4 +100,18 @@ func IsPalin(x int) bool {
 		}
 	}
 	return true
+}
+
+func GenFibbo(max int) []int {
+	result := []int{0, 1}
+	a := 0
+	b := 1
+	c := 0
+	for n := 2; n <= max; n++ {
+		c = a + b
+		a = b
+		b = c
+		result = append(result, c)
+	}
+	return result
 }

@@ -6,7 +6,7 @@ import (
 
 func main() {
 	// TODO parse it from argument
-	Solve(686)
+	Solve(66)
 }
 
 func Solve(i int) {
@@ -23,7 +23,8 @@ func Solve(i int) {
 		9:   problem.Problem9,
 		10:  problem.Problem10,
 		719: problem.Problem719,
-		686: problem.Problem686,
+		684: problem.Problem684,
+		66:  problem.Problem66,
 	}
 
 	fnMap[i]()
